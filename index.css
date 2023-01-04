@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+    padding-bottom: 0px;
+}
+span{
+    color: #ff7b00;
+    font-size: 46px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo{
+    font-size: 46px;
+    color: #fff'
+}
+.nav {
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active a { color: #000; }
+
+.nav.active .container { padding: 10px 0; }
+
+.nav a.current,
+.nav a:hover {
+    color: #ff7b00;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: fill;
+    background-position: bottom center;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0px;
+    z-index: -2;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin: -20px 0 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* </> Section */
+.w3 {
+    justify-content:center;
+    position: fixed;
+    width: 100%;
+    height: 93%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    margin-top: 69px;
+    font-family: 'Roboto';
+}
+.ITEM {
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    background-color: #D9EEE1;
+    border-radius: 8px;
+    text-align: center;
+    width: 500px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 20px 10px 0px 10px;
+}
+.ITEM:hover{
+    box-shadow: 10px 10px 20px gray;
+    height: 480px;
+}
+.ITEM a{
+    color: #222;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.ITEM a:hover{ font-size: 90px; }
+.ITEM p {
+    margin: 15px;
+    font-size: 20px;
+}
+.expanded{ position: relative; }
+.expanded p{
+    font-weight: normal;
+    color: #222;
+    bottom: 0;
+    margin-top: 25px;
+}
+.expanded p:hover{
+    font-weight: bold;
+    color: #ff7b00;
+    font-size: 25px;
+}
+
+/* Arts Section */
+
+
+/* CFOP Section */
+
+
+/* About Section */
+
+.about-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    width: 30%;
+    height: 93%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    margin-top: 72px;
+    font-family: 'Roboto';
+}
+.ITEM-about {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    transition: all .3s ease-in-out;
+    background-color: white;
+    border-radius: 8px;
+    width: 400px;
+    height: 140px;
+    margin: auto;
+}
+.ITEM-about:hover{
+    box-shadow: 0px 0px 20px gray;
+    background-color: #ff7b00;
+}
+.ITEM-about a {
+    margin: auto;
+    color: #222;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.Side-info {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    width: 70%;
+    height: 93%;
+    left: 30%;
+    top: 0;
+    z-index: 10;
+    flex-wrap: wrap;
+    background-color: gray;
+    margin-top: 72px;
+    font-family: 'Roboto';
+}
