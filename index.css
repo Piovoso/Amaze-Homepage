@@ -34,9 +34,14 @@ span{
     font-size: 46px;
     color: var(--Font_color);
 }
+.container img {
+    padding-top: 10px;
+    height:55px;
+    margin-right: 20px;
+    margin-bottom: -5px;
+}
 .nav {
     position: fixed;
-    border-radius: 0px 0px 20px 20px;
     top: 0;
     left: 0;
     right: 0;
@@ -79,8 +84,8 @@ span{
 .nav a:hover {
     color: var(--Main_color);
     font-weight: bold;
+    text-shadow: 0 -20px 40px var(--shadow);
 }
-
 .center {
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
@@ -150,7 +155,7 @@ span{
 .side-expanded{
     max-height: 0px;
     overflow: hidden;
-    transition: max-height .5s ease-in-out;
+    transition: all .5s ease-in-out;
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
@@ -181,7 +186,6 @@ span{
     transition: max-height .5s ease-in-out;
 }
 .side-item:hover{
-    border-width: 3px;
     border-radius: 40px 8px 40px 8px;
     background-color: var(--Main_background);
     box-shadow: 0 0 20px var(--shadow);
@@ -189,48 +193,52 @@ span{
 
 .settings-info {
     display: flex;
-    position: fixed;
+    position: absolute;
     justify-content: flex-end;
+    align-items: center;
     width: 25%;
     height: auto;
+    top:auto;
+    left:auto;
     bottom: 0;
     right: 0;
     flex-wrap: wrap;
     font-family: 'Roboto';
     font-size: 20px;
 }
-.toggle_button{
+.settings-hover{
+    overflow: hidden;
+    border: 2px solid var(--border);
     border-radius: 30px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: var(--border);
-    color: var(--Font_color);
-    position: relative;
-    transition: 0.5s;
-    margin: 20px;
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items:flex-start;
+    margin:20px;
+    padding:10px;
     text-align: center;
-    padding-top:10px;
-    width: 100px;
-    height: 50px;
 }
-.toggle_button:hover{
-    border-width: 3px;
+.settings-hover:hover{
     border-radius: 40px 40px 8px 40px;
-    width: 90%;
-    height: 500px;
 }
-
+.settings-hover:hover> .settings-expanded{
+    max-height: 500px;
+    max-width: 90%;
+    transition: max-height .5s ease-in-out;
+}
+.settings-expanded{
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+    transition: max-height .5s ease-in-out;
+    flex-wrap:wrap;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
 .toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 20px;
     height: auto;
     width: auto;
 }
@@ -247,7 +255,7 @@ span{
     display: block;
 }
 .slider {
-    background-color: var(--Main_background);
+    background-color: #eee;
     margin-left: 10px;
     position: relative;
     display: block;
@@ -257,29 +265,28 @@ span{
     height: 25px;
 }
 .slider:hover{
-    box-shadow: 0 0 12px rgba(64, 64, 64, 0.5);
+    box-shadow: 0 0 12px var(--border);
 }
 .slider::before{
     content: '';
     position: absolute;
     height: auto;
     width: 20px;
-    background-color: var(--Font_color);
+    background-color: #666;
     top: 4px;
     bottom: 4px;
     left: 4px;
     transition: .4s;
 }
 input:checked + .slider{
-    background-color: #ffcc00;
-    box-shadow: 0 0 12px #ffcc00;
+    background-color: var(--Main_background);
 }
 input:checked + .slider::before{
     background-color: var(--Main_color);
     transform: translateX(18px);
 }
 .slider.round{
-    border-radius: 5px;
+    border-radius: 10px;
     border-width: 2px;
     border-style: solid;
     border-color: var(--border);
