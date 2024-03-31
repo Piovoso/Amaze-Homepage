@@ -42,10 +42,11 @@ span {
 }
 .nav {
     position: relative;
-    margin: 10px;
-    border: 1px solid var(--shadow);
+    margin: 10px 32px 10px 32px;
+    border: 2px solid var(--shadow);
+    border-bottom: 5px solid var(--shadow);
     border-radius: 10px;
-    background-color: rgba(255, 0, 0, 0.1);
+    background-color: rgba(0, 0, 100, 0.07);
 }
 
 .nav .container {
@@ -130,6 +131,7 @@ span {
     border-radius: 10px;
     border-style: solid;
     border-width: 2px;
+    border-bottom-width: 5px;
     border-color: var(--border);
     text-align: center;
     width: 90%;
@@ -184,7 +186,7 @@ span {
     transition: max-height .5s ease-in-out;
 }
 .side-item:hover {
-    border-radius: 40px 8px 40px 8px;
+    border-radius: 4px 4px 30px 30px;
     background-color: var(--Main_background);
     box-shadow: 0 0 20px var(--shadow);
 }
@@ -203,6 +205,7 @@ span {
     font-family: 'Roboto';
 }
 .ITEM {
+    
     box-shadow: 0 0 30px var(--shadow);
     text-decoration: none;
     overflow: hidden;
@@ -212,6 +215,7 @@ span {
     border-style: solid;
     border-width: 2px;
     border-color: var(--border);
+    border-bottom-width: 5px;
     text-align: center;
     width: 500px;
     height: auto;
@@ -266,8 +270,7 @@ span {
 }
 
 .ITEM:hover {
-    border-radius: 40px 4px 40px 4px;
-    border-width: 3px;
+    border-radius: 4px 4px 30px 30px;
     background-color: var(--Main_color);
 }
 
