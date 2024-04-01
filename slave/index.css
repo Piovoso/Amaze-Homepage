@@ -26,6 +26,8 @@ span {
     color: var(--Main_color);
     font-size: 20px;
 }
+/* NAVIGATION */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -48,7 +50,6 @@ span {
     border-radius: 10px;
     background-color: rgba(0, 0, 100, 0.07);
 }
-
 .nav .container {
     display: flex;
     justify-content: space-between;
@@ -85,18 +86,24 @@ span {
     font-weight: bold;
     text-shadow: 0 -20px 40px var(--shadow);
 }
-.center {
-    background-image: url(../images/background.jpg);
+
+
+.mainArea {
+    max-height: max-content;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
     background-repeat: no-repeat;
-    background-size: fill;
     background-position: bottom center;
-    position:fixed;
-    top:73px;
-    bottom:0px;
-    right:0%;
-    left:0%;
+    background-image: url(../images/background.jpg);
+}
+/* HOMEPAGE CENTER */
+.center {
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    font-family: "Roboto";
     color: var(--Font_color);
     text-shadow: 0 0 150px var(--shadow);
 }
@@ -110,18 +117,10 @@ span {
     font-size: 20px;
     padding-top: 1%;
 }
-
+/* SIDE ITEM BOXES */
 .side-info {
-    display: flex;
-    justify-content:center;
-    position: fixed;
     width: 25%;
-    height: auto;
-    top: 73px;
-    left: 0;
-    right: 75%;
     flex-wrap: wrap;
-    font-family: 'Roboto';
 }
 .side-item {
     text-decoration: none;
@@ -134,8 +133,8 @@ span {
     border-bottom-width: 5px;
     border-color: var(--border);
     text-align: center;
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: fit-content;
     margin-top: 30px;
     padding: 20px;
     color: var(--Font_color);
@@ -182,7 +181,7 @@ span {
     background-color: var(--Main_light);
 }
 .side-item:hover> .side-expanded {
-    max-height: 500px;
+    max-height: 600px;
     transition: max-height .5s ease-in-out;
 }
 .side-item:hover {
@@ -202,7 +201,6 @@ span {
     left: 0;
     right: 0;
     flex-wrap: wrap;
-    font-family: 'Roboto';
 }
 .ITEM {
     
@@ -390,7 +388,6 @@ input:checked + .slider::before {
     box-shadow: 0px 2px 3px var(--shadow);
 }
 .ITEM-about a {
-    font-family: 'Roboto';
     margin: auto;
     color: gray;
     text-decoration: none;
